@@ -185,7 +185,7 @@ class Product {
   }
 //..........................selling end.................
 
-public void profitDetails(){
+public int profitDetails(){
 	int value=0;
 
 		for(int i = 0; i<ProducName.length ; i++){
@@ -196,7 +196,9 @@ public void profitDetails(){
 			}
 		}
 	//System.out.print("\n\t**************************************************************\n ");	
-	//System.out.print("\t\t\t\t\t\t\t"+value);	
+	//System.out.print("\t\t\t\t\t\t\t"+value);
+	return value;
+	
 	}
 }
 
@@ -218,6 +220,10 @@ public void profitDetails(){
 		double profitAllc=0;
 		double profitAll=0;
 		
+		double sellingAcf=0;
+		double sellingAcs=0;
+		double sellingAcc=0;
+		
 		int optionmain;
 		int searchCode;
 		int foodSportsComseSelection;
@@ -235,22 +241,22 @@ public void profitDetails(){
 		
 		int[] fcode = {101,102,103,104,105,106,107,108,109,110};
 		String[] fName={"Banana","Cake","Bread","Gelly","rochi","Paddis","Paddis","Biscuit","tea","coffee"};
-		int fUnitPrice[] = {40,10,30,10,25,12,32,14,31,5};
-		int fQuentity[] = {100,100,100,80,100,100,100,100,100,100};
+		int fUnitPrice[] = {10,12,13,10,25,12,32,14,31,5};
+		int fQuentity[] = {100,100,100,100,100,100,100,100,100,100};
 		// End Product section
 				 
 		//sports section start
 		int[] scode = {201,202,203,204,205};
 		String sName[] = {"Ball","Bat","Stamps","Bails","Gloves"};	 
 		int sUnitPrice[] = {320,150,310,520,150};		 
-		int sQuentity[] = {100,100,100,80,100};	 
+		int sQuentity[] = {100,100,100,100,100};	 
 		//sports section End 
 	
 	   //cosmetics section start
 		int[] ccode = {301,302,303,304,305};
 		String cName[] = {"Brash","Pest","Loson","powder","snow"};	 
 		int cUnitPrice[] = {50,150,310,520,560};		 
-		int cQuentity[] = {100,100,30,100,100};	 
+		int cQuentity[] = {100,100,100,100,100};	 
 		//cosmetics section End 
 	
 		
@@ -337,9 +343,11 @@ do{
 			System.out.println("\n\n\t*************************MEMo*************************************");
 			System.out.println("\t* Code \t Product name \tUnit Price \t Qyt\t  Amount \t:");
 			System.out.println("\t**************************************************************");	
-			product.profitDetails();
-			sports.profitDetails();
-			cosmetice.profitDetails();
+			sellingAcf = product.profitDetails();
+			sellingAcs = sports.profitDetails();
+			sellingAcc = cosmetice.profitDetails();
+			System.out.println("\n\t\t\t\t\t\t Total="+(sellingAcf+sellingAcs+sellingAcc));
+			
 			
 			checkvaildoption=5;
 			}
