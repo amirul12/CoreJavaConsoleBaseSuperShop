@@ -3,7 +3,7 @@ import java.util.Scanner;
 //---------------employee section start--------
 class Employee {
 	
-	String[] name = {"Amirul", "Mizan", "Shadin", "Ispahan", "Sagor", "Mizan", "Hasan", "Ashek", "Bisso", "bingal"};
+	String[] name = {"Amirul", "Mizan", "Shadin", "arafat", "Sagor", "Mizan", "Hasan", "Ashek", "Bisso", "bingal"};
 	int[] code = {101, 102, 103, 104, 105, 106, 107, 108, 109, 110};
 	String[] Designation = {"Programmer", "Developer", "Manager ", "Designer", "Designer", "Ux Develop", "Shopkeeper",  "Shopkeeper", "Shopkeeper", "Shopkeeper"};
 	int[] leave = {1, 4, 2, 4, 6, 3, 1, 0, 1, 3};
@@ -11,6 +11,17 @@ class Employee {
 	int[] employeeSalary = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 	
 	
+		public void headerEmployee(){
+		System.out.print("\t|***********************************************************************************************************************|\n");
+		System.out.print("\n\t|\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t|");
+		System.out.print("\n\t|\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t|");
+		System.out.print("\n\t|\t\t\t\t\t\tOrnet Super Shop\t\t\t\t\t\t\t\t|");
+		System.out.print("\n\t|\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t|");
+		System.out.print("\n\t|\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t|");
+		System.out.print("\n\t|***********************************************************************************************************************|\n");
+		
+ 
+	}
 
 	 public void DisplayAllEm(){
 		 
@@ -21,21 +32,14 @@ class Employee {
 				 System.out.println("\n");
 			}
 			
-			System.out.println("\n\n\t     *****************************************");
-			System.out.println("\t     *                                       *");
-			System.out.println("\t     *           Ornet Super Shop            *");
-			System.out.println("\t     *                                       *");
-			System.out.println("\t     *****************************************");
-			System.out.println("\t     *           Employee Details            *");
-			System.out.println("\n*******************************************************************");
-			System.out.println("*                                                                 *");
-			System.out.println("*  Name   \tCode\tDesignation\tLeave\tSallery\t Salary    *");
-			System.out.println("*                                                                 *");
-			System.out.println("*******************************************************************");
-			for(int i=0; i<name.length; i++){
-				System.out.println("|  "+name[i]+"\t"+code[i]+"\t"+Designation[i]+"\t"+leave[i]+"\t"+sal[i]+"\t"+employeeSalary[i]+ "\t  |");
+		headerEmployee();
+ 		System.out.print("\n\n\t\t\t\t\t|------------------------Employee Details-------------------------------|\n");
+		System.out.print("\t\t\t\t\t| Name \tCode\tDesignation\tleave \tSalary\t Total Salary  |\n");
+		System.out.print("\t\t\t\t\t|----------------------------------------------------------------|\n");
+ 			for(int i=0; i<name.length; i++){
+				System.out.print("\n\t\t\t\t\t|"+name[i]+"\t"+code[i]+"\t"+Designation[i]+"\t"+leave[i]+"\t"+sal[i]+"\t"+employeeSalary[i]+ "\t  |");
 			}
-			System.out.println("*******************************************************************");
+			System.out.print("\n\t\t\t\t\t*******************************************************************");
 	 }	
 }
 
@@ -64,18 +68,24 @@ class Product {
 	}
 	
 	public void header(){
-		System.out.println("\n\n\t     *****************************************");
-		System.out.println("\t     *                                       *");
-		System.out.println("\t     *           Ornet Super Shop            *");
-		System.out.println("\t     *                                       *");
-		System.out.println("\t     *****************************************");
+		System.out.print("\t|***********************************************************************************************************************|\n");
+		System.out.print("\n\t|\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t|");
+		System.out.print("\n\t|\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t|");
+		System.out.print("\n\t|\t\t\t\t\t\tOrnet Super Shop\t\t\t\t\t\t\t\t|");
+		System.out.print("\n\t|\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t|");
+		System.out.print("\n\t|\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t|");
+		System.out.print("\n\t|***********************************************************************************************************************|\n");
+		
+ 
 	}
 	
 	public void mainOption(){
 		
-		System.out.println("\n\n\t**************************************************************");
-		System.out.println("\t* Press 1: Stock\t Press 2: Selling\tPress 3: Profit/loss\tPress 4:Employee*");
-		System.out.println("\t**************************************************************");	
+		System.out.println("\n\n\t|***********************************************************************************************************************|");
+		System.out.println("\t|-----------------------------------------------------------------------------------------------------------------------|");
+		System.out.println("\t|  Press 1:Stock\tPress 2:Selling\tPress 3:Adding Item 4:Profit/loss\tPress 5:Employee \t Press 0: Exit  |");
+		System.out.println("\t|-----------------------------------------------------------------------------------------------------------------------|");
+		System.out.println("\t|***********************************************************************************************************************|");	
 	}
 	public void passingProduct(int[] co, String  pName[],int  pPrice[],int pQuentity[]){
 		code = co;
@@ -87,7 +97,7 @@ class Product {
 	
   public void dispAllProduct(){
 		for(int i = 0; i<ProducName.length ; i++){
-			System.out.print("\n\t"+code[i]+" :\t"+ProducName[i]+"\t"+UnitPrice[i]+"\t"+ToatalQuentity[i]+"\t"+UnitPrice[i]*ToatalQuentity[i]);		
+			System.out.print("\n\t\t\t\t\t\t"+code[i]+" :\t"+ProducName[i]+"\t"+UnitPrice[i]+"\t"+ToatalQuentity[i]+"\t"+UnitPrice[i]*ToatalQuentity[i]);		
 		}
   }
   
@@ -104,13 +114,10 @@ class Product {
 		return p;
   }
   
-  public void aproducterAdding(int i){
-	  System.out.println(" Adding :"+i+"\nproduct code: "+code[i-1]);
-	  System.out.println(" Adding :"+i+"\nName Oproduct Product: "+ProducName[i-1]);
-	  System.out.println("Unit Price:"+UnitPrice[i-1]);
-	  System.out.println("Total QYT:"+ToatalQuentity[i-1]);
-	  System.out.println("Total Amount:"+ToatalQuentity[i-1]*UnitPrice[i-1]);
-	  
+  public void aproducterAdding(int i){ 
+			space();
+			System.out.println("\n\t\t\t\t\tSuccessfully Adding: "+ProducName[i]); 
+			System.out.println("\n\t\t\t\t\tAfter Adding Product Qyt:"+ToatalQuentity[i]);  
   }
   
   //----------------edit product start-----------------------
@@ -118,16 +125,33 @@ class Product {
   
   //-----------------------add qyt start---------------------
   public void addQyt(){
+	  int productCode;
+	  int c=0;
+	  System.out.print("\n\t\t\t\t\tEnter Product Code");
+	  productCode= sc.nextInt();
 	  
-	 System.out.print("\n\tAdding Product QYT: Enter Product ID:  "); 
-	 int addqytID = sc.nextInt();
-	 System.out.print("\n\t Enter Qyt: ");
-	 int addQyt= sc.nextInt();
-	  int tem = ToatalQuentity[addqytID-1];
-	  tem = tem+addQyt;
-	  ToatalQuentity[addqytID-1] = tem;
-		aproducterAdding(addqytID);
+	  int sum=0; 
+		for(int i = 0; i<ProducName.length ; i++){
+			if(code[i]==productCode && ToatalQuentity[i] <100){
+			 System.out.print("\t\t\t\t\tEnter Qyt of Product: "+ProducName[i]+"\n\t\t\t\t\t");
+			 productCode= sc.nextInt();
+				ToatalQuentity[i] = ToatalQuentity[i]+ productCode;
+				aproducterAdding(i);
+				}
+		}
+	 
+
+	  
   }
+   public  void AddingCheck(){
+			int sum=0; 
+		for(int i = 0; i<ProducName.length ; i++){
+			if(ToatalQuentity[i]<100){
+			 
+			System.out.print("\n\t\t\t\t\t"+code[i]+" :\t"+ProducName[i]+"\t\t\t"+ToatalQuentity[i]+"\t\t"+(100-ToatalQuentity[i]));			
+		}
+	}	 
+}
   //....................add qyt end...................
   //------------------sellect start------------
   public void sellQyt(int pID, int qyt){
@@ -158,22 +182,22 @@ class Product {
   public void selling(int productId){
 		int i;
 		int sellingContinue=0;
-		 System.out.print("\n\t You Select Product Name :"+ProducName[productId]);
-		 System.out.print("\n\t You have product Qyt :"+ToatalQuentity[productId]); 
-		 System.out.print("\n\t Enter Qyt:");
+		 System.out.print("\n\t\t\t\t\t You Select Product Name :"+ProducName[productId]);
+		 System.out.print("\n\t\t\t\t\t You have product Qyt :"+ToatalQuentity[productId]); 
+		 System.out.print("\n\t\t\t\t\t Enter Qyt:");
 		 i = sc.nextInt();	
 		 do{
 		 if(ToatalQuentity[productId]<=i){
-			 System.out.print("\n\t sorry \n");
-			 System.out.print("\n\t You have product Qyt :"+ToatalQuentity[productId]); 
-			 System.out.print("\n\t Selling?  \n Enter Qyt(Bellow OF "+ToatalQuentity[productId]+" ): \n\t\t" );
+			 System.out.print("\n\t\t\t\t\t sorry \n");
+			 System.out.print("\n\t\t\t\t\t You have product Qyt :"+ToatalQuentity[productId]); 
+			 System.out.print("\n\t\t\t\t\t Selling?  \n Enter Qyt(Bellow OF "+ToatalQuentity[productId]+" ): \n\t\t\t\t\t" );
 			 i = sc.nextInt();
 				if(ToatalQuentity[productId]>=i){
-					System.out.print("\n\t Successfully Selling :"+ProducName[productId]);
+					System.out.print("\n\t\t\t\t\t Successfully Selling :"+ProducName[productId]);
 				sellQyt(productId,i); 
 				}
 				else{
-					System.out.print("\n\t sorry \n");
+					System.out.print("\n\t\t\t\t\t sorry \n");
 					break;
 				}
 		 }else{
@@ -191,8 +215,8 @@ public int profitDetails(){
 		for(int i = 0; i<ProducName.length ; i++){
 			if(ToatalQuentity[i] <100){
 			value =value + UnitPrice[i]*(100-ToatalQuentity[i]);
-			System.out.print("\n\t"+code[i]+" :\t"+ProducName[i]+"\t\t"+UnitPrice[i]+"\t\t"+(100-ToatalQuentity[i])+"\t"+UnitPrice[i]*(100-ToatalQuentity[i]));		
-			System.out.print("\n\t-------------------------------------------------------------\n\t");
+			System.out.print("\n\t\t\t\t\t"+code[i]+" :\t"+ProducName[i]+"\t\t"+UnitPrice[i]+"\t\t"+(100-ToatalQuentity[i])+"\t"+UnitPrice[i]*(100-ToatalQuentity[i]));		
+			System.out.print("\n\t\t\t\t\t-------------------------------------------------------------\n\t");
 			}
 		}
 	//System.out.print("\n\t**************************************************************\n ");	
@@ -242,21 +266,21 @@ public int profitDetails(){
 		int[] fcode = {101,102,103,104,105,106,107,108,109,110};
 		String[] fName={"Banana","Cake","Bread","Gelly","rochi","Paddis","Paddis","Biscuit","tea","coffee"};
 		int fUnitPrice[] = {10,12,13,10,25,12,32,14,31,5};
-		int fQuentity[] = {100,100,100,100,100,100,100,100,100,100};
+		int fQuentity[] = {100,100,40,100,100,100,100,100,100,100};
 		// End Product section
 				 
 		//sports section start
 		int[] scode = {201,202,203,204,205};
 		String sName[] = {"Ball","Bat","Stamps","Bails","Gloves"};	 
 		int sUnitPrice[] = {320,150,310,520,150};		 
-		int sQuentity[] = {100,100,100,100,100};	 
+		int sQuentity[] = {100,10,100,100,100};	 
 		//sports section End 
 	
 	   //cosmetics section start
 		int[] ccode = {301,302,303,304,305};
 		String cName[] = {"Brash","Pest","Loson","powder","snow"};	 
 		int cUnitPrice[] = {50,150,310,520,560};		 
-		int cQuentity[] = {100,100,100,100,100};	 
+		int cQuentity[] = {100,20,100,100,100};	 
 		//cosmetics section End 
 	
 		
@@ -270,31 +294,30 @@ public int profitDetails(){
 do{
 
 	product.mainOption();
-		if(checkvaildoption==5){
-		System.out.print("\t\t\tInvalid/ please: ");
+		if(checkvaildoption==6){
+		System.out.print("\n\t\t\t\t\tInvalid/ please: ");
 	}
-	System.out.print("\n\t\t\t Select Option: ");
+	System.out.print("\n\t\t\t\t\tSelect Option: ");
 	optionmain = sc.nextInt();
 	if(optionmain== 1){
-			System.out.print("\t\t\tStock Details: \n\t\t\t Press 1: for Details . Press  0: Exit Stock \n\t\t\t");
+			System.out.print("\n\t\t\t\t\tStock Details: \n\t\t\t\t\tPress 1: for Details & Press  0: Exit Stock \n\t\t\t\t\t");
 			
 			productSelectOption = sc.nextInt();
 			if(productSelectOption == 1){
 			for( int j =0; j<50; j++){
 				 System.out.println("\n");
 			}
-				System.out.print("\n\t\tFood Details:\n");
-				System.out.print("ProductID\tName\tPrice\tQyt\tTotal Amount");
-				System.out.print("\n--------------------------------------------------\n");
+				System.out.print("\n\t\t\t\t\tFood Details:\n");
+				System.out.print("\n\t\t\t\t\tProductID\tName\tPrice\tQyt\tTotal Amount");
+				System.out.print("\n\t\t\t\t\t--------------------------------------------------\n");
 				product.dispAllProduct();
-				System.out.print("\n\n\n\t\tSports Details:\n");
+				System.out.print("\n\n\n\t\t\t\t\tSports Details:\n");
 				sports.dispAllProduct();
-				System.out.print("\n\n\n\t\tCosmetice Details:\n");
+				System.out.print("\n\n\n\t\t\t\t\tCosmetice Details:\n");
 				cosmetice.dispAllProduct();
 			}
 			else{
-				System.out.print("\n \n \n"); 
-				//checkvaildoption=5;//
+				 product.space();
 			}
 			
 		 
@@ -302,18 +325,18 @@ do{
 		else if(optionmain== 2){
 			
 		do{
-			System.out.print("\n\t\t\tSelling Product Code:\n\t\t\t1: food\t2: Sports\t3: Cometics\n\t\t\t");
+			System.out.print("\n\t\t\t\t\tSelling Product Code:\n\n\t\t\t\t\t1: food\t\t2:Sports\t3:Cometics\n\t\t\t\t\t");
 			foodSportsComseSelection = 0;
 			productId = sc.nextInt();
 			if(productId == 1){
-				System.out.print("\n\t\t\t Enter Food (101-110)ID :");
+				System.out.print("\n\t\t\t\t\t Enter Food (101-110)ID :");
 				searchCode = sc.nextInt();
 				int q =  product.seldetails(searchCode);
 				//System.out.print("\n\t Enter Food ID :"+q);
 				//product.aproducterAdding(q);			
 			}
 			else if(productId == 2){
-				System.out.print("\n\t Enter Sports(201-205) ID :");
+				System.out.print("\n\t\t\t\t\t Enter Sports(201-205) ID :");
 				searchCode = sc.nextInt();
 				int q =  sports.seldetails(searchCode);
 				//sports.selling_details(q);
@@ -321,7 +344,7 @@ do{
 				//sports.aproducterAdding(q);
 			}
 			else if(productId == 3){
-				System.out.print("\n\t Enter Cosmetics(301-305) ID :");
+				System.out.print("\n\t\t\t\t\t Enter Cosmetics(301-305) ID :");
 				searchCode = sc.nextInt();
 				int q =  cosmetice.seldetails(searchCode);
 				//System.out.print("\n\t Enter Cosmetics ID :"+q);
@@ -331,33 +354,65 @@ do{
 			else{
 				product.space(); // clear and show  header 
 				 
-				System.out.print("\n Invalid Key\n "); 
+				System.out.print("\n\t\t\t\t\t Invalid Key\n "); 
 				
 			}
-			System.out.print("\n 1: contine to sell 5: Memo 0: exit\n\t\t"); 
+			System.out.print("\n\t\t\t\t\tPress  1: contine to sell Press5: Memo 0: exit\n\t\t\t\t\t"); 
 			foodSportsComseSelection = sc.nextInt();	
 		}while(foodSportsComseSelection==1);
 		
 			if(foodSportsComseSelection==5){
 			product.space(); // clear and show  header 
-			System.out.println("\n\n\t*************************MEMo*************************************");
-			System.out.println("\t* Code \t Product name \tUnit Price \t Qyt\t  Amount \t:");
-			System.out.println("\t**************************************************************");	
+			System.out.println("\n\n\t\t\t\t\t*************************MEMo*************************************");
+			System.out.println("\t\t\t\t\t* Code \t Product name \tUnit Price \t Qyt\t  Amount \t:");
+			System.out.println("\t\t\t\t\t**************************************************************");	
 			sellingAcf = product.profitDetails();
 			sellingAcs = sports.profitDetails();
 			sellingAcc = cosmetice.profitDetails();
-			System.out.println("\n\t\t\t\t\t\t Total="+(sellingAcf+sellingAcs+sellingAcc));
+			System.out.println("\n\t\t\t\t\t\t\t\t\t\t Total="+(sellingAcf+sellingAcs+sellingAcc));
 			
 			
 			checkvaildoption=5;
 			}
+			else if(foodSportsComseSelection !=5 || foodSportsComseSelection != 1 || foodSportsComseSelection != 0){
+				product.space(); // clear and show  header 
+				System.out.println("\t\t\t\t\t*You Hava Pressed Wrong Key*");
+				 mainloopcheck=2;
+			}
 			else{
-				
 				 mainloopcheck=2;
 			}
 		}
 		else if(optionmain== 3){
-			
+				int productCode;
+				System.out.print("\n\t\t\t\t\tPlease Adding This Product:\n\n\n");
+				System.out.println("\t\t\t\t\t* Code \t Product name \tHava Qyt \t Adding Qyt");
+				System.out.println("\t\t\t\t\t**************************************************************");					 
+				product.AddingCheck();
+				sports.AddingCheck();
+				cosmetice.AddingCheck();
+				System.out.print("\n\t\t\t\t\tAdding Product Code:\n\n\t\t\t\t\t1: food[101-110]\t\t2:Sports[201-205]\t3:Cometics[301-305]\n\t\t\t\t\t");
+				productCode= sc.nextInt();
+				
+				if(productCode == 1){
+					product.addQyt();
+				}
+				else if(productCode == 2){
+						sports.addQyt();
+				}
+				else if(productCode == 3){
+						cosmetice.addQyt();
+				}
+				else{
+	 
+					System.out.print("\n\t\t\t\t\t Worng Kye");
+				}
+			 
+			checkvaildoption=1;
+		}
+		
+		else if(optionmain== 4){
+			product.space(); // clear and show  header 
 			System.out.println("\n\n\t***********************************************Profit/Loss**********************************************************");
 			System.out.println("\t* Code\tProductName\tStock Qyt\tPresentQyt\tSold Qyt\tUnitPrice\tProfit/loss\tRequireToAdd|");
 			System.out.println("\t----------------------------------------------------------------------------------------------------------------------");	
@@ -371,7 +426,8 @@ do{
 			checkvaildoption=1;
 			 
 		}
-		else if(optionmain== 4){
+		
+		else if(optionmain== 5){
 			System.out.print(" Employee:");
 			em.DisplayAllEm();
 		 
@@ -379,43 +435,13 @@ do{
 			for( int j =0; j<50; j++){
 				 System.out.println("\n\t\t\t\t\t\n");
 			}
-			if(optionmain>=1 && optionmain<5){// checking option 
+			if(optionmain>=1 && optionmain<6){// checking option 
 			checkvaildoption=1;
 			}else{
-			checkvaildoption=5;	
+			checkvaildoption=6;	
 			}
 		}
-}while(mainloopcheck>1);
-		 
-		// System.out.print("\n\t Adding Qyt: ");
-		// product.addQyt(); 
-		 //selling section....
-		// System.out.print("\n\t Selling Product: ");
-		//System.out.print("\n\t Selling Product Code:");
-		//productId = sc.nextInt();
-		//product.selling(productId);
-		// product.dispAllProduct();
-		 
-		 //Product calling end
-		 
-		 
-		//
-		//sports.dispAllProduct();
-		//sports.addQyt(); 
-		//System.out.print("\n\t Selling Product Code:");
-		//productId = sc.nextInt();
-		//sports.selling(productId);
-		//sports.dispAllProduct();
-		 
-
-	
-		 
-		 
- 
-				 
-				 
-				 
-				 
+	}while(mainloopcheck>1);
 				 
 	}
 
